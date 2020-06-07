@@ -1,0 +1,42 @@
+.items-container {
+  margin-top: 30px;
+  padding: 0px;
+  min-width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-button {
+  margin: 0;
+  padding: 10px 20px;
+  border-top: 1px solid #4f4f4f;
+  border-left: 1px solid #4f4f4f;
+  border-right: 1px solid #4f4f4f;
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #313131;
+  text-align: left;
+}
+
+.item-button:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.item-button:last-child {
+  border-bottom: 1px solid #4f4f4f;
+  border-radius: 0 0 5px 5px;
+}
+
+.item-button:hover {
+  cursor: pointer;
+  background-color: #184c71;
+}
+
+.item-button:focus {
+  background-color: #184c71;
+}
+
+.item-button:active {
+  background-color: #185f84;
+  color: rgba(255, 255, 255, 1);
+}

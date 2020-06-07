@@ -1,0 +1,47 @@
+.app-content {
+  margin: auto 60px;
+
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: max-content auto;
+  grid-template-areas:
+    'random random'
+    'random-toggle random-toggle'
+    'selector data';
+}
+
+.app-random {
+  grid-area: random;
+}
+
+.app-random-toggle {
+  grid-area: random-toggle;
+}
+
+.app-person-selector {
+  grid-area: selector;
+}
+
+.app-person-data {
+  grid-area: data;
+  margin: 0 0 0 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .app-content {
+    margin: auto 60px;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      'random'
+      'random-toggle'
+      'selector'
+      'data';
+  }
+
+  .app-person-data {
+    margin: 0;
+  }
+}
