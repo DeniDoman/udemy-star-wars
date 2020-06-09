@@ -18,6 +18,10 @@
   text-align: left;
 }
 
+.item-button-selected {
+  background-color: #184c71;
+}
+
 .item-button:first-child {
   border-radius: 5px 5px 0 0;
 }
@@ -34,6 +38,7 @@
 
 .item-button:focus {
   background-color: #184c71;
+  outline: none;
 }
 
 .item-button:active {

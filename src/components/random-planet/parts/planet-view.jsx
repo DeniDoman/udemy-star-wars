@@ -6,7 +6,7 @@ const PlanetView = ({
 }) => {
   return (
     <>
-      <img className="image" alt="random planet image" src={image} />
+      <img className="image" alt="random planet" src={image} />
       <p className="title">{name}</p>
       <ul className="data">
         <li>Population: {population}</li>

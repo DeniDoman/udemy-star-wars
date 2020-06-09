@@ -1,43 +1,43 @@
 export default class Swapi {
   static #baseUrl = `https://swapi.dev/api`;
 
-  static async getAllPeople() {
+  static getAllPeople = async () => {
     return (await this._getResource(`/people/`)).results.map(
       this._transformPerson,
     );
-  }
+  };
 
-  static async getPerson(id) {
+  static getPerson = async (id) => {
     return this._transformPerson(
       await this._getResource(`/people/${id}/`),
     );
-  }
+  };
 
-  static async getAllPlanets() {
+  static getAllPlanets = async () => {
     return (await this._getResource(`/planets/`)).results.map(
       this._transformPlanet,
     );
-  }
+  };
 
-  static async getPlanet(id) {
+  static getPlanet = async (id) => {
     return this._transformPlanet(
       await this._getResource(`/planets/${id}/`),
     );
-  }
+  };
 
-  static async getAllStarships() {
+  static getAllStarships = async () => {
     return (await this._getResource(`/starships/`)).results.map(
       this._transformStarship,
     );
-  }
+  };
 
-  static async getStarship(id) {
+  static getStarship = async (id) => {
     return this._transformStarship(
       await this._getResource(`/starships/${id}/`),
     );
-  }
+  };
 
-  static async _getResource(url) {
+  static _getResource = async (url) => {
     const res = await fetch(this.#baseUrl + url);
 
     if (!res.ok)
@@ -46,7 +46,7 @@ export default class Swapi {
       );
 
     return await res.json();
-  }
+  };
 
   static _extractId = (item) => {
     return item.url.match(/\/([0-9]*)\/$/)[1];
@@ -75,6 +75,7 @@ export default class Swapi {
   static _transformStarship = (starship) => {
     return {
       id: this._extractId(starship),
+      name: starship.name,
       model: starship.model,
       manufacturer: starship.manufacturer,
       costInCredits: starship.cost_in_credits,

@@ -7,7 +7,7 @@
     'image data indicator';
   justify-items: start;
   background-color: #313131;
-  border-radius: 5px;
+  border-radius: 5px 5px 5px 0;
   padding: 20px 20px;
   margin-top: 30px;
   min-width: max-content;

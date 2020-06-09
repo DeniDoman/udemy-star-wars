@@ -2,7 +2,7 @@ export default class SwVisual {
   static #baseUrl = `https://starwars-visualguide.com/assets/img`;
 
   static getPersonImage = (id) => {
-    return `${this.#baseUrl}/people/${id}.jpg`;
+    return `${this.#baseUrl}/characters/${id}.jpg`;
   };
 
   static getPlanetImage = (id) => {

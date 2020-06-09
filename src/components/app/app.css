@@ -3,11 +3,13 @@
 
   display: grid;
   grid-template-rows: auto auto auto;
-  grid-template-columns: max-content auto;
+  grid-template-columns: min-content 1fr;
   grid-template-areas:
     'random random'
     'random-toggle random-toggle'
-    'selector data';
+    'person-selector person-data'
+    'planet-selector planet-data'
+    'starship-selector starship-data';
 }
 
 .app-random {
@@ -19,11 +21,29 @@
 }
 
 .app-person-selector {
-  grid-area: selector;
+  grid-area: person-selector;
 }
 
 .app-person-data {
-  grid-area: data;
+  grid-area: person-data;
+  margin: 0 0 0 40px;
+}
+
+.app-planet-selector {
+  grid-area: planet-selector;
+}
+
+.app-planet-data {
+  grid-area: planet-data;
+  margin: 0 0 0 40px;
+}
+
+.app-starship-selector {
+  grid-area: starship-selector;
+}
+
+.app-starship-data {
+  grid-area: starship-data;
   margin: 0 0 0 40px;
 }
 
@@ -37,8 +57,12 @@
     grid-template-areas:
       'random'
       'random-toggle'
-      'selector'
-      'data';
+      'person-selector'
+      'peson-data'
+      'planet-selector'
+      'planet-data'
+      'starship-selector'
+      'starship-data';
   }
 
   .app-person-data {
